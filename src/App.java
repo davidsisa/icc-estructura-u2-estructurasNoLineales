@@ -1,6 +1,7 @@
 import java.util.List;
 import main.Ejercicio_01_insert.InsertBTTest;
 import main.Ejercicio_02_invert.InvertBinaryTree;
+import main.Ejercicio_03_Depth.Depth;
 import main.Ejercicio_03_listLevels.ListLevels;
 import main.materia.Models.Node;
 import main.materia.controllers.ArbolAVL;
@@ -15,8 +16,18 @@ public class App {
         //runEjercicio1();
         //runEjercicio2();
         //runEjercicio3();
+        runEjercicio4();
        
-       
+        }
+        private static void runEjercicio4(){
+            Depth tree = new  Depth();
+            tree.insert(4);
+            tree.insert(2);
+            tree.insert(7);
+            tree.printTree();
+            int var = tree.calculateDepth();
+            System.out.println(" Profundidad: " + var);
+            
         }
         private static void runEjercicio2(){
             InvertBinaryTree invert = new InvertBinaryTree();
