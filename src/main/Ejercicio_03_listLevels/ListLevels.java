@@ -1,4 +1,4 @@
-package main.ejercicio3;
+package main.Ejercicio_03_listLevels;
 import main.materia.Models.Node;
 import java.util.*;
 public class ListLevels {

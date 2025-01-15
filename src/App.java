@@ -1,16 +1,50 @@
 import java.util.List;
-import main.ejercicio3.ListLevels;
+import main.Ejercicio_01_insert.InsertBTTest;
+import main.Ejercicio_02_invert.InvertBinaryTree;
+import main.Ejercicio_03_listLevels.ListLevels;
 import main.materia.Models.Node;
+import main.materia.controllers.ArbolAVL;
 import main.materia.controllers.ArbolBinario;
 import main.materia.controllers.ArbolRE;
 
 public class App {
     public static void main(String[] args) throws Exception {
         //runArbolBinario();
+        //runArbol2();
+        //runArbolAvl();
+        //runEjercicio1();
+        //runEjercicio2();
         //runEjercicio3();
-        runArbol2();
+       
+       
         }
-        
+        private static void runEjercicio2(){
+            InvertBinaryTree invert = new InvertBinaryTree();
+            invert.insert(4);
+            invert.insert(2);
+            invert.insert(7);
+            invert.insert(1);
+            invert.insert(3);
+            invert.insert(6);
+            invert.insert(9);
+            System.out.println("Arbol : ");
+            invert.printTree();
+            invert.invertTree();
+            System.out.println("Arbol Invertido: ");
+            invert.printTree();
+        }
+            private static void runEjercicio1(){
+                InsertBTTest insertarA = new InsertBTTest();
+                insertarA.insert(5);
+                insertarA.insert(3);
+                insertarA.insert(7);
+                insertarA.insert(2);
+                insertarA.insert(4);
+                insertarA.insert(6);
+                insertarA.insert(8);
+                insertarA.printTree();
+                
+            }
             private static void runArbolBinario() {
                 ArbolBinario arbolB = new ArbolBinario();
                 int[] valores = {40,20,60,10,30,50,70,5,15,55};
@@ -62,4 +96,13 @@ public class App {
                 arbolRecorridos.inOrderRecursivo(arbolbinario.getRoot());
                 
             }
+                private static void runArbolAvl() {
+                int [] values = {10,20,15,24,9,8,21,23,50,25};   
+                ArbolAVL arbolavl = new ArbolAVL();
+                for(int num : values){
+                    arbolavl.insert(num);
+                }
+                     arbolavl.printTree();
+
+    }
 }
