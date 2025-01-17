@@ -20,6 +20,7 @@ public class App {
         //runEjercicio3();
         //runEjercicio4();
         runGraph();
+        //INCIAR GRAFOS
         }
         private static void runGraph(){
             Graph grafo = new Graph();
@@ -36,6 +37,7 @@ public class App {
             grafo.addEdge(b, c);
             grafo.printGraph();
         }
+        
         private static void runEjercicio4(){
             Depth tree = new  Depth();
             tree.insert(4);
