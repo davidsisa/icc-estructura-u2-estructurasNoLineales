@@ -5,7 +5,7 @@ public class NodeG {
     private List <NodeG> neighbors;
     public NodeG(int value){
         this.value = value;
-        this.neighbors = new ArrayList<>();
+        this.neighbors = new LinkedList<>();
     }
     public int getValue() {
         return value;

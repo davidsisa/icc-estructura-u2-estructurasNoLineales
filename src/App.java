@@ -4,9 +4,11 @@ import main.Ejercicio_02_invert.InvertBinaryTree;
 import main.Ejercicio_03_Depth.Depth;
 import main.Ejercicio_03_listLevels.ListLevels;
 import main.materia.Models.Node;
+import main.materia.Models.NodeG;
 import main.materia.controllers.ArbolAVL;
 import main.materia.controllers.ArbolBinario;
 import main.materia.controllers.ArbolRE;
+import main.materia.controllers.Graph;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -16,8 +18,23 @@ public class App {
         //runEjercicio1();
         //runEjercicio2();
         //runEjercicio3();
-        runEjercicio4();
-       
+        //runEjercicio4();
+        runGraph();
+        }
+        private static void runGraph(){
+            Graph grafo = new Graph();
+            NodeG a = grafo.addNode(5);
+            NodeG b = grafo.addNode(7);
+            NodeG c = grafo.addNode(9);
+            NodeG d = grafo.addNode(11);
+            NodeG e = grafo.addNode(3);
+            grafo.addEdge(a, b);
+            grafo.addEdge(a, c);
+            grafo.addEdge(a, e);
+            grafo.addEdge(e, d);
+            grafo.addEdge(c, e);
+            grafo.addEdge(b, c);
+            grafo.printGraph();
         }
         private static void runEjercicio4(){
             Depth tree = new  Depth();

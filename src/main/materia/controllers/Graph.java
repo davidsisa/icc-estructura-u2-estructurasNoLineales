@@ -14,4 +14,18 @@ public class Graph {
         nodes.add(newNode);
         return newNode;
     }
+    public void addEdge(NodeG src, NodeG dest){
+        src.addNeightbor(dest);
+        dest.addNeightbor(src);
+    
+    }
+    public void printGraph(){
+        for (NodeG ptr: nodes) {
+            System.out.println(" Vertice " + ptr.getValue() + ": ");
+            for (NodeG nei : ptr.getNeighbors()) {
+                System.out.println(nei.getValue() +" - ");
+                System.out.println();
+            }
+        }
+    }
 }
