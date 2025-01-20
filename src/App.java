@@ -28,25 +28,41 @@ public class App {
     private static void runGraph() {
 
         Graph grafo = new Graph();
-        NodeG h = grafo.addNode(0);
-        NodeG a = grafo.addNode(1);
-        NodeG b = grafo.addNode(2);
-        NodeG c = grafo.addNode(3);
-        NodeG d = grafo.addNode(4);
-        NodeG e = grafo.addNode(5);
-
-        grafo.addEdgeDirect(h, c);
+        NodeG a = grafo.addNode(0);
+        NodeG b = grafo.addNode(1);
+        NodeG c = grafo.addNode(2);
+        NodeG d = grafo.addNode(3);
+        NodeG e = grafo.addNode(4);
+        NodeG h = grafo.addNode(5);
+        NodeG j = grafo.addNode(7);
+        NodeG k = grafo.addNode(8);
+        NodeG l = grafo.addNode(9);
+        grafo.addEdgeDirect(a, d);
         grafo.addEdgeDirect(a, h);
-        grafo.addEdgeDirect(h, e);
+        grafo.addEdgeDirect(a, b);
+        grafo.addEdgeDirect(d, l);
+        grafo.addEdgeDirect(d, j);
+        grafo.addEdgeDirect(d, c);
         grafo.addEdgeDirect(c, b);
-        grafo.addEdgeDirect(c, d);
+        grafo.addEdgeDirect(e, b);
+        grafo.addEdgeDirect(j, k);
+        grafo.addEdgeDirect(k, b);
         grafo.addEdgeDirect(b, a);
-
+        grafo.addEdgeDirect(b, k);
+        grafo.addEdgeDirect(b, c);
+        grafo.addEdgeDirect(b, e);
+        grafo.addEdgeDirect(c, d);
+        grafo.addEdgeDirect(d, a);
+        grafo.addEdgeDirect(d, e);
+        grafo.addEdgeDirect(e, d);
+        grafo.addEdgeDirect(h, a);
+        grafo.addEdgeDirect(j, d);
+        grafo.addEdgeDirect(k, j);
+        grafo.addEdgeDirect(k, j);
+        grafo.addEdgeDirect(l, d);
         grafo.printGraph();
+        
 
-        grafo.getDFS(h);
-
-        grafo.getBFS(h);
     }
 
     private static void runEjercicio4() {

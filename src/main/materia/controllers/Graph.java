@@ -73,4 +73,16 @@ public class Graph {
         }
 
     }
+    public boolean getDFS(NodeG start,NodeG dest){
+        
+        Set<NodeG> visitados = new HashSet<>();
+        return getDFSDirect(start,dest,visitados);
+    
+    }
+        
+            private boolean getDFSDirect(NodeG start, NodeG dest, Set<NodeG> visitados) {
+                // TODO Auto-generated method stub
+                throw new UnsupportedOperationException("Unimplemented method 'getDFSDirect'");
+            }
+
 }
